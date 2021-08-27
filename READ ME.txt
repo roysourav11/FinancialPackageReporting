@@ -1,0 +1,28 @@
+
+READ ME
+
+
+Process Name: FinancialReportingPackages
+
+Process description: Checking all financial packages, update the cover page and based on that validate the other package values.
+
+Additional information: 
+
+System Error: 
+
+1) In Process State in system error Current excel file will not be processed and go for the init and start again. Maximum limit of retry as per config.
+
+2) In initilatation if system or business exception will happen, that will redirect to End Process.
+
+Business Exception: 
+
+1) For process level business exception for excel file value validation, if the validation is failed, then mail will be trigerred with that file atachment, and go to next sheet. If Coverpage worksheet not able to update, then will go to next file for validation, skip the other worksheets for the current file.
+
+2) For Initilation state business exception will redirect to End Process state.
+
+No Transaction state has been used, as it is a single transaction process. Add-ins and followed stateps I did not add in the process. Final mail I did not add.
+
+As per my understanding about the process I did the development, please pass the feedback which is most important and helpful for my learning.
+
+
+Thank you
